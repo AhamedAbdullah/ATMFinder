@@ -26,7 +26,7 @@ android {
 
     }
     buildTypes.each {
-        it.resValue "string", 'GOOGLE_PLACE_API_KEY', "AIzaSyDFm6MqlvSECoL7jyf85717vmhUTO6mTck"
+        it.resValue "string", 'GOOGLE_PLACE_API_KEY', "AIzaSyAQPck6wTS1ul0FhcDZXmU-C4KtDg1aaK0"
     }
 
 }
