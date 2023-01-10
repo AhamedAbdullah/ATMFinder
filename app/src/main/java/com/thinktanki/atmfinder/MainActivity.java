@@ -32,6 +32,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.thinktanki.atmfinder.atm.ATMFragment;
 import com.thinktanki.atmfinder.util.AndroidUtil;
 import com.thinktanki.atmfinder.adapter.FragmentViewPager;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 import java.util.ArrayList;
 
@@ -57,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCenter.start(getApplication(), "31ba3ed7-6f0f-4bca-bcf2-da312c376289",
+                Analytics.class, Crashes.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
